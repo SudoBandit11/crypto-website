@@ -20,8 +20,7 @@ class CryptoPrices extends React.Component {
       .then((response) => {
         // add a new property to each prices object to store the full name of the currency
         const prices = response.data.map(prices => ({
-          ...prices,
-          name: prices.name + ' (' + prices.symbol + ')',
+          ...prices,name: prices.name + ' (' + prices.symbol + ')',
         }));
         this.setState({ prices });
       })
